@@ -1,0 +1,117 @@
+/* global.css или Header.module.css */
+html,
+body,
+#__next {
+  background-color: #F4EFED;
+  min-height: 100vh;
+  /* Чтобы занимали всю высоту */
+  width: 100%;
+  /* Чтобы занимали всю ширину */
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; */
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.no-hover-bg.ant-btn-primary:hover,
+.no-hover-bg.ant-btn-primary:focus {
+  background-color: #F4EFED !important;
+  border-color: #F4EFED !important;
+}
+
+.ant-layout,
+.ant-layout-content,
+.ant-layout-header {
+  padding: 0 !important;
+  /* убираем лишний отступ */
+  margin: 0 !important;
+  background: transparent;
+  /* чтобы не перекрывал фон hero */
+}
+
+.underline-highlight {
+  /* листаем под текстом: 100% ширины и 0.2em высоты */
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  /* смещаем вниз на нужную высоту строки */
+  background-position: 0 1.1em;
+  /* наклоняем всю заливку */
+  background-image: linear-gradient(135deg, #0C0B0B 0%, #0C0B0B 100%);
+}
+
+.underline-wavy {
+  /* включаем подчёркивание */
+  text-decoration-line: underline;
+  /* толщина линии */
+  text-decoration-thickness: 2px;
+  /* стиль — волнистая линия */
+  text-decoration-style: wavy;
+  /* цвет */
+  text-decoration-color: #0C0B0B;
+  /* небольшой отступ от текста, чтобы линия не прилегала впритык */
+  text-underline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  /* толщина полосы */
+  height: 6px;
+  /* если есть горизонтальный скролл */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  /* цвет фона дорожки */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  /* цвет ползунка */
+  border-radius: 3px;
+  /* скругление */
+  border: 1px solid transparent;
+  /* для дополнительной «воздушки» */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  /* тонкий скроллбар */
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+.ant-carousel .slick-arrow {
+  display: block !important;
+}
+
+.ant-carousel .slick-arrow::before {
+  /* ставим размер иконки */
+  font-size: 24px;
+  /* задаём цвет, фон, обводку под макет */
+  color: #6B665A;
+  background: #fff;
+  border: 1px solid #6B665A;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
+.custom-fb .ant-float-btn-icon {
+  width: 32px !important;
+  height: 32px !important;
+  display: flex;
+  /* чтобы иконка центрировалась */
+  align-items: center;
+  justify-content: center;
+}

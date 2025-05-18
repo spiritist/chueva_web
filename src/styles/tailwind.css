@@ -1,0 +1,5 @@
+/* This is entry/index file for all styles, because use postcss-import plugin. */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
