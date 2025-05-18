@@ -1,1 +1,0 @@
-Web-Client for Petrographic sections

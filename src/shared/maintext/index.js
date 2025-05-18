@@ -8,7 +8,7 @@ const MainSection = () => (
                px-4 sm:px-6 md:px-8
                items-center text-center
                pt-[100px] 
-               md:pt-[130px] md:items-start md:text-left
+               md:pt-[130px] md:items-start md:text-center
                lg:pt-0 lg:items-start lg:px-0 sm:mt-24"
     >
         <div
