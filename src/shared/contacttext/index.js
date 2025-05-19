@@ -6,7 +6,7 @@ import Image from 'next/image';
 const { Title, Text } = Typography;
 
 const ContactSection = () => (
-    <section id="contact" className="py-12 md:py-24"> {/* Уменьшены вертикальные отступы для мобильных */}
+    <section id="contact" className="py-8 md:py-16"> {/* Уменьшены вертикальные отступы для мобильных */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <Row gutter={[32, 32]} align="middle" className="flex-col-reverse md:flex-row"> {/* Изменен порядок для мобильных: текст сверху, потом фото */}
                 {/* Правая (теперь первая на мобильных) колонка с текстом и кнопкой */}

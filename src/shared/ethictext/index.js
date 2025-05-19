@@ -4,7 +4,7 @@ import { Row, Col, Card, Typography } from 'antd'
 const { Title, Paragraph } = Typography
 
 const EthicSection = () => (
-    <section id="ethic" className="bg-gray-50 py-8 md:py-16"> {/* Уменьшены вертикальные отступы */}
+    <section id="ethic" className="bg-gray-50 py-8 md:py-4"> {/* Уменьшены вертикальные отступы */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <Row>
                 <Col span={24} className="flex justify-center md:justify-end text-center md:text-right mb-6 md:mb-8"> {/* Центрирование заголовка на мобильных */}
@@ -92,7 +92,7 @@ const EthicSection = () => (
                             <span style={{ fontStyle: 'italic' }}>гарантировано</span>
                         </Title>
 
-                        <div style={{ textAlign: 'center', marginTop: '1rem md:auto' }}> {/* 'md:auto' чтобы на десктопе отступ был рассчитан flex 'space-between' */}
+                        <div className="md:mt-12 lg:mt-auto" style={{ textAlign: 'center' }}> {/* 'md:auto' чтобы на десктопе отступ был рассчитан flex 'space-between' */}
                             <a
                                 href="https://psyethics.ru/code/"
                                 target="_blank"

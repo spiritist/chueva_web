@@ -9,7 +9,7 @@ function FullscreenImage() {
           src="/Images/main.jpg"
           alt="Фоновое изображение для десктопа"
           fill
-          className="object-cover w-full h-full"
+          className="object-cover w-full h-full lg:px-2 lg:py-2 sm:rounded-3xl "
           priority
         />
       </div>

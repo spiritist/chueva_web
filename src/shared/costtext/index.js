@@ -7,6 +7,7 @@ const { Title, Paragraph } = Typography;
 const COST_OPTIONS = [
   {
     type: 'Онлайн',
+    titleLines: ['Индивидуальная', 'консультация'],
     title: 'Индивидуальная консультация',
     price: '3000 ₽/60 мин',
   },
@@ -18,7 +19,7 @@ const COST_OPTIONS = [
 ];
 
 const CostSection = () => (
-  <section id="cost" className="bg-gray-50 py-8 sm:py-12 md:py-16">
+  <section id="cost" className="bg-gray-50 py-8 sm:py-12 md:py-4">
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Добавлены общие px */}
       {/* Заголовок секции */}
       <div className="flex flex-col items-center sm:flex-row sm:justify-end mb-6 sm:mb-8">
@@ -46,7 +47,7 @@ const CostSection = () => (
               {/* Заголовок варианта */}
               <Title
                 level={3}
-                className="text-xl sm:text-2xl md:text-[2.5rem] font-normal text-zinc-800 mb-3 sm:mb-4 text-center leading-tight" // Адаптивный размер, цвет Tailwind
+                className="text-xl sm:text-2xl md:text-4xl font-normal text-zinc-800 mb-3 sm:mb-4 text-center leading-tight" // Адаптивный размер, цвет Tailwind
                 style={{ fontFamily: 'Georgia Pro, serif' }}
               >
                 {option.titleLines ? (
@@ -61,11 +62,10 @@ const CostSection = () => (
                 bordered
                 // hoverable // Убрал
                 // style={{ cursor: 'default' }} // Убрал
-                className="rounded-lg shadow-sm w-full"
-                bodyStyle={{ padding: '1rem sm:1.5rem' }} // Адаптивный padding
+                className="rounded-lg shadow-sm w-full h-24"
               >
                 <Paragraph
-                  className="text-3xl sm:text-4xl md:text-[3.5rem] text-gray-500 m-0 text-center leading-none" // Адаптивный размер, цвет Tailwind
+                  className="text-3xl sm:text-4xl md:text-4xl text-gray-800 m-0 text-center leading-nones" // Адаптивный размер, цвет Tailwind
                   style={{ fontFamily: 'Georgia Pro, serif' }}
                 >
                   {option.price}

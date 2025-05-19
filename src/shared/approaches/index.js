@@ -18,7 +18,7 @@ const approachesData = [
 ];
 
 const ApproachesSection = () => (
-  <section id="approaches" className="bg-gray-50 py-8 sm:py-12 md:py-16"> {/* Увеличен pb для согласованности */}
+  <section id="approaches" className="bg-gray-50 sm:py-4 md:py-2"> {/* Увеличен pb для согласованности */}
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Добавлены общие px */}
       <div className="flex flex-col items-center sm:flex-row sm:justify-end mb-6 sm:mb-8">
         <Title
@@ -32,7 +32,7 @@ const ApproachesSection = () => (
       {approachesData.map(({ title, acronym, text }, idx) => (
         <div
           key={acronym}
-          className="flex flex-col md:flex-row md:items-start md:space-x-8 mb-8 sm:mb-12 last:mb-0" // Замена Row на flex, адаптивные отступы
+          className="flex flex-col text-center md:text-left md:flex-row md:items-start md:space-x-8 mb-8 sm:mb-12 last:mb-0" // Замена Row на flex, адаптивные отступы
         >
           {/* Левая колонка с заголовком */}
           <div className="w-full md:w-1/3 mb-4 md:mb-0">
@@ -50,13 +50,12 @@ const ApproachesSection = () => (
           <div className="w-full md:w-2/3 flex md:justify-end">
             <Card
               bordered
-              // hoverable // Убрал
-              // style={{ cursor: 'default' }} // Убрал
+              hoverable // Убрал
+              style={{ cursor: 'default' }} // Убрал
               className={`
                 rounded-lg shadow-sm
                 w-full 
                 max-w-full md:max-w-[900px]
-                ${idx === 0 ? 'md:mt-8 lg:mt-12' : ''} // Условный отступ только для md и выше
               `}
               bodyStyle={{ padding: '1rem sm:1.5rem' }} // Адаптивный padding
             >

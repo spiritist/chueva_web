@@ -1,36 +1,45 @@
-import React, { memo } from 'react'
-import { Row, Col, Image } from 'antd'
+import React, { memo } from 'react';
+import { Row, Col, Image as AntImage } from 'antd'; // Используем AntImage, чтобы не конфликтовать с next/image, если он есть в проекте
+
+// Для простоты, текст можно вынести в константы, если он статичен
+const leftColumnText = {
+    title: {
+        part1: 'Основа моей работы — ',
+        part2: 'это системная психотерапия',
+    },
+    paragraph: {
+        part1: 'Я использую методы с\u00A0', // неразрывный пробел
+        highlight: 'научно\u00A0доказанной', // неразрывный пробел
+        part2: '\u00A0эффективностью.', // неразрывный пробел
+    },
+};
+
+const rightColumnText = [
+    'Проблема — это не чья-то вина или «патология» личности клиента.',
+    'Проблема — это сигнал о том, что в системе (семья, пара, окружение клиента) что-то не работает так, как раньше, и требуется новое решение.',
+];
 
 const SystemicSection = () => {
     return (
-        <section id='about' className="bg-gray-50 py-16">
-            <div className="max-w-6xl mx-auto">
-                <Row gutter={[64, 32]} align="middle">
-                    {/* Левая колонка: убираем боковой padding и поднимаем чуть выше */}
-                    <Col
-                        xs={24}
-                        md={8}
-                        className="relative -mt-32 pl-0 md:pl-4"  /* pl-0 — текст у левого края, на мобилках можно вернуть немного pl-4 */
-                    >
-                        <div className="space-y-6">
-                            <h2 className="text-4xl sm:text-4xl font-serif leading-tight">
-                                Основа моей работы —{' '}
-                                <strong className="font-semibold">это системная психотерапия</strong>.
+        <section id='about' className="bg-gray-50 py-12 md:py-16 lg:py-20"> {/* Адаптивные вертикальные отступы */}
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Горизонтальные отступы для всей секции */}
+                {/* Вместо Row/Col от AntD, используем Flexbox для лучшего контроля на мобильных */}
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between lg:space-x-8 xl:space-x-16">
+
+                    {/* Левая колонка: Текст */}
+                    <div className="w-full lg:w-1/3 order-1 lg:order-1 mb-8 lg:mb-0">
+                        {/* Смещение -mt-32 будет применяться только на lg и выше */}
+                        <div className="lg:-mt-1 space-y-4 md:space-y-6 text-center sm:text-left">
+                            <h2 className="text-3xl sm:text-4xl font-serif leading-tight">
+                                {leftColumnText.title.part1}
+                                <strong className="font-semibold">{leftColumnText.title.part2}</strong>.
                             </h2>
                             <p className="text-base sm:text-lg text-gray-700">
-                                Я использую методы с&nbsp;
+                                {leftColumnText.paragraph.part1}
                                 <span className="relative inline-block whitespace-nowrap">
-                                    научно&nbsp;доказанной
+                                    {leftColumnText.paragraph.highlight}
                                     <svg
-                                        className="
-                                            absolute
-                                            left-0
-                                            w-full
-                                            h-2
-                                            top-full               /* привязка к низу контейнера */
-                                            translate-y-1          /* смещаем вниз на 0.25rem (~4px) */
-                                            pointer-events-none
-                                            "
+                                        className="absolute left-0 w-full h-2 top-full translate-y-1 pointer-events-none"
                                         viewBox="0 0 100 5"
                                         preserveAspectRatio="none"
                                         aria-hidden="true"
@@ -43,41 +52,40 @@ const SystemicSection = () => {
                                         />
                                     </svg>
                                 </span>
-                                &nbsp;эффективностью.
+                                {leftColumnText.paragraph.part2}
                             </p>
                         </div>
-                    </Col>
+                    </div>
 
-                    {/* Центральная колонка: картинку чуть побольше */}
-                    <Col xs={24} md={8} className="flex justify-center px-0">
-                        <Image
-                            src="/Images/about.jpg"
+                    {/* Центральная колонка: Изображение */}
+                    {/* На мобильных и планшетах изображение будет между текстовыми блоками */}
+                    <div className="w-full sm:w-3/4 md:w-1/2 lg:w-1/3 order-2 lg:order-2 mx-auto lg:mx-0 mb-8 lg:mb-0 flex justify-center">
+                        <AntImage // Используем AntImage, если это изображение из Ant Design (с preview и т.д.)
+                            // Если это обычное изображение, лучше использовать <img /> или next/image
+                            src="/Images/about.jpg" // Убедитесь, что путь к изображению правильный
                             preview={false}
-                            className="rounded-lg shadow-lg"
-                            style={{ width: '100%', maxWidth: 380, height: 'auto' }}  /* увеличили до 380px */
+                            alt="Системная психотерапия" // Добавлен более описательный alt
+                            className="rounded-lg shadow-lg object-cover w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-full" // Адаптивная ширина
+                        // style={{ height: 'auto' }} // height: auto для сохранения пропорций
                         />
-                    </Col>
+                    </div>
 
-                    {/* Правая колонка: текст у правого края, опускаем чуть ниже */}
-                    <Col
-                        xs={24}
-                        md={8}
-                        className="relative mt-32 pr-0 md:pr-4"  /* pr-0 — текст у правого края */
-                    >
-                        <div className="space-y-6">
-                            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                                Проблема — это не чья-то вина или «патология» личности клиента.
-                            </p>
-                            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                                Проблема — это сигнал о том, что в системе (семья, пара, окружение клиента)
-                                что-то не работает так, как раньше, и требуется новое решение.
-                            </p>
+                    {/* Правая колонка: Текст */}
+                    <div className="w-full lg:w-1/3 order-3 lg:order-3">
+                        {/* Смещение mt-32 будет применяться только на lg и выше */}
+                        <div className="lg:mt-48 space-y-4 md:space-y-6 text-center sm:text-left">
+                            {rightColumnText.map((text, index) => (
+                                <p key={index} className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                                    {text}
+                                </p>
+                            ))}
                         </div>
-                    </Col>
-                </Row>
+                    </div>
+
+                </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default memo(SystemicSection)
+export default memo(SystemicSection);

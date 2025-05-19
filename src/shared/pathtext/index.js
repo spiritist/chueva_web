@@ -5,8 +5,8 @@ import Image from 'next/image'
 const { Title, Paragraph } = Typography
 
 const PathSection = () => (
-    <section id='approaches' className="bg-gray-50 py-8 md:py-16"> {/* Уменьшены вертикальные отступы для мобильных */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Добавлены горизонтальные отступы */}
+    <section id='approaches' className="bg-gray-50 py-8 md:py-4"> {/* Уменьшены вертикальные отступы для мобильных */}
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-6"> {/* Добавлены горизонтальные отступы */}
             <Row>
                 <Col span={24} className="flex justify-center md:justify-end text-center md:text-right mb-6 md:mb-8"> {/* Центрирование заголовка на мобильных */}
                     <Title level={2} className="text-3xl md:text-4xl font-serif mb-0"> {/* Уменьшен размер заголовка для мобильных */}
@@ -18,7 +18,7 @@ const PathSection = () => (
             <div>
                 <Row gutter={[16, 16]} align="top" justify="start" className="items-stretch"> {/* Уменьшен gutter для мобильных */}
                     {/* Карточка с текстом */}
-                    <Col xs={24} md={12} className="flex mb-4 md:mb-0"> {/* Добавлен отступ снизу для мобильных */}
+                    <Col xs={24} md={24} lg={12} className="flex mb-4 md:mb-0"> {/* Добавлен отступ снизу для мобильных */}
                         <Card
                             bordered
                             className="relative rounded-lg shadow-sm p-4 md:p-8 w-full" // Уменьшены внутренние отступы для мобильных, w-full
@@ -41,10 +41,9 @@ const PathSection = () => (
                                 </Paragraph>
                             </div>
                             {/* Иконка объятий - позиционирование изменено для адаптивности */}
-                            <div className="absolute -top-5 -right-5 md:-mt-10 md:ml-64 h-12 z-10"> {/* Адаптивное позиционирование иконки */}
+                            <div className="absolute hidden lg:block -top-5 -right-5 md:-mt-10 md:ml-64 h-12 z-10"> {/* Адаптивное позиционирование иконки */}
                                 <Image
                                     src="/Images/hugs.png"
-                                    alt="Иконка объятий"
                                     width={48} // Уменьшен размер иконки для мобильных
                                     height={48}
                                     className="object-contain"
@@ -54,13 +53,13 @@ const PathSection = () => (
                     </Col>
 
                     {/* Картинка */}
-                    <Col xs={24} md={12} className="flex justify-center md:justify-end"> {/* Центрирование картинки на мобильных */}
+                    <Col xs={24} md={24} lg={12} className="flex justify-center md:justify-end"> {/* Центрирование картинки на мобильных */}
                         <Card
                             bordered={false}
-                            className="rounded-lg overflow-hidden shadow-sm w-full max-w-full md:max-w-[600px]" // max-w-full для мобильных
+                            className="rounded-lg overflow-hidden shadow-sm w-full hidden lg:block lg:h-140 max-w-full md:max-w-[600px]" // max-w-full для мобильных
                             bodyStyle={{ padding: 0, height: '100%' }} // height: '100%' для заполнения
                         >
-                            <div className="relative w-full h-[300px] md:h-auto md:aspect-[4/3] max-h-[60vh] md:max-h-[80vh]"> {/* Задана высота для мобильных, аспект для десктопа */}
+                            <div className="relative w-full h-0 lg:h-140 md:aspect-[4/3] max-h-[60vh] md:max-h-[80vh]"> {/* Задана высота для мобильных, аспект для десктопа */}
                                 <Image
                                     src="/Images/path.jpg"
                                     alt="Путь к психотерапии"
