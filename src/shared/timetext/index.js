@@ -6,7 +6,7 @@ import Image from 'next/image';
 const { Title, Paragraph } = Typography;
 
 const TimeSection = () => (
-  <section id="time" className="bg-gray-50"> {/* Увеличил вертикальные отступы для лучшего вида */}
+  <section id="time" className="bg-gray-50 mt-6"> {/* Увеличил вертикальные отступы для лучшего вида */}
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Используем flex-col для мобильных и flex-row для md и выше */}
       <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-0 lg:space-x-0">

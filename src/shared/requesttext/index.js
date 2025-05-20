@@ -18,7 +18,7 @@ const RequestItem = ({ iconSrc, title, items }) => (
                 />
             </div>
             <Paragraph
-                className="text-lg sm:text-xl font-bold m-0" // Адаптивный шрифт
+                className="text-xl sm:text-xl font-bold m-0" // Адаптивный шрифт
                 style={{ fontFamily: 'Georgia Pro, serif' }}
             >
                 {title}
@@ -64,7 +64,7 @@ const ColumnSeparator = () => (
 
 
 const ReqSection = () => (
-    <section id="request" className="bg-gray-50 py-8 sm:py-4 md:py-4">
+    <section id="request" className="bg-gray-50 py-4 sm:py-4 md:py-4">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <Row>
                 <Col span={24} className="flex justify-center sm:justify-end mb-6 sm:mb-8">

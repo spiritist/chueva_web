@@ -56,7 +56,7 @@ const ExpSection = () => (
 
           {/* Изображение - будет под текстом на мобильных */}
           <div className="w-full md:w-1/3 lg:w-2/5 flex justify-center md:justify-end">
-            <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-80 lg:h-85 rounded-lg overflow-hidden"> {/* Адаптивные размеры для изображения */}
+            <div className="relative w-48 h-48 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-80 lg:h-85 xl:h-85 xl:w-85 rounded-lg overflow-hidden"> {/* Адаптивные размеры для изображения */}
               <Image
                 src="/Images/exp.jpg" // ваш путь
                 alt="Личный опыт"

@@ -4,6 +4,7 @@ const nextConfig = {
   // основные опции
   //-------------------------------------------------
   reactStrictMode: true,
+  output: 'standalone',
 
   // списки пакетов для swc-транспиляции (оставьте те, что действительно нужны)
   transpilePackages: [
