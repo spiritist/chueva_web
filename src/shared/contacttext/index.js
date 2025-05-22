@@ -79,7 +79,7 @@ const ContactSection = () => (
                             // alignSelf: 'flex-start', // Убрано для центрирования кнопки на мобильных
                         }}
                         className="md:w-70 sm:w-auto" // Кнопка на всю ширину на очень маленьких экранах
-                        href="https://web.telegram.org/a/#486188328" legacyBehavior>
+                        href="https://t.me/Ulyana_chueva" legacyBehavior>
                         ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</Button>
                 </Col>
             </Row>

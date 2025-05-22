@@ -20,7 +20,7 @@ const BackToTop = () => {
 
   return (
     <FloatButton.Group shape="circle" style={{ insetInlineEnd: 32 }}>
-      <FloatButton className="custom-fb" href="https://web.telegram.org/a/#-1002273016747" icon={
+      <FloatButton className="custom-fb" href="https://t.me/monadoss" icon={
         <Image
           src="/icons/Logo.svg"
           width={32}

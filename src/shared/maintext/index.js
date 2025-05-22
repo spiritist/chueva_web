@@ -44,7 +44,7 @@ const MainSection = () => (
           <br />
           <a className="hidden xs:block">Ко мне можно прийти на индивидуальную, парную или семейную психотерапию.</a>
         </p>
-        <Link href="https://web.telegram.org/a/#486188328" legacyBehavior>
+        <Link href="https://t.me/Ulyana_chueva" legacyBehavior>
           <a target="_blank" rel="noopener noreferrer" className="block">
             <Button
               type="primary"
