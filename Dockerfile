@@ -20,6 +20,7 @@ COPY . .
 # Переменная окружения NEXT_TELEMETRY_DISABLED=1 отключает телеметрию Next.js во время сборки
 ENV NEXT_TELEMETRY_DISABLED=1
 RUN yarn build
+RUN yarn cache clean
 
 # ---- Этап 2: Запуск приложения (Runner) ----
 # Используем такой же минимальный образ Node.js Alpine для запуска
