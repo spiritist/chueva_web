@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import Head from 'next/head';
 import FullscreenImage from '@/shared/fullimage';
 import SystemicSection from '@/shared/abouttext';
 import BackToTop from '@/shared/backtop';
@@ -13,11 +14,37 @@ import ReqSection from '@/shared/requesttext';
 import ContactSection from '@/shared/contacttext';
 import PHeader from '@/layouts/Header';
 import { Divider } from 'antd';
-import MainSection from '@/shared/maintext'; // Предполагаем, что MainSection.js находится в shared
+import MainSection from '@/shared/maintext';
 
 const MainPage = () => {
+    const siteUrl = "https://chuevatherapy.ru";
+    const siteTitle = "Ульяна Чуева - Системный семейный психотерапевт | Онлайн и Москва";
+    const siteDescription = "Индивидуальные, парные и семейные консультации психотерапевта Ульяны Чуевой (магистр психологии НИУ ВШЭ). Системная семейная терапия, ОРКТ. Запишитесь на прием.";
+    const ogImage = `${siteUrl}/Images/main.jpg`;
+
     return (
         <>
+            <Head>
+                <title>{siteTitle}</title>
+                <meta name="description" content={siteDescription} />
+                {/* Open Graph / Facebook */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={siteUrl} />
+                <meta property="og:title" content={siteTitle} />
+                <meta property="og:description" content={siteDescription} />
+                <meta property="og:image" content={ogImage} />
+                <meta property="og:image:width" content="1200" /> {/* Укажите размеры, если известны */}
+                <meta property="og:image:height" content="630" /> {/* Стандартный размер для OG image */}
+                <meta property="og:locale" content="ru_RU" />
+                {/* Twitter */}
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content={siteUrl} />
+                <meta property="twitter:title" content={siteTitle} />
+                <meta property="twitter:description" content={siteDescription} />
+                <meta property="twitter:image" content={ogImage} />
+                {/* Другие мета-теги, если нужны */}
+                <link rel="canonical" href={siteUrl} /> {/* Канонический URL */}
+            </Head>
             <BackToTop />
             <div id='hero' className="relative w-full h-screen overflow-hidden max-sm:mx-0 sm:mx-4 md:mx-0 lg:mx-0">
                 <FullscreenImage />

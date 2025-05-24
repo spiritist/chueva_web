@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/ # Если не хотите, чтобы API-эндпоинты индексировались
+
+Sitemap: https://chuevatherapy.ru # Замените на ваш URL

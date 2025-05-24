@@ -5,11 +5,11 @@
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 module.exports = {
-    // purge: [
-    //     './src/components/**/*.{js,ts,jsx,tsx}',
-    //     './src/shared/**/*.{js,ts,jsx,tsx}',
-    //     './src/pages/**/*.{js,ts,jsx,tsx}',
-    // ],
+    purge: [
+         './src/components/**/*.{js,ts,jsx,tsx}',
+         './src/shared/**/*.{js,ts,jsx,tsx}',
+         './src/pages/**/*.{js,ts,jsx,tsx}',
+     ],
     theme: {
         extend: {
             fontFamily: {
