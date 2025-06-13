@@ -5,7 +5,7 @@ import { Row, Col, Image as AntImage } from 'antd'; // Используем AntI
 const leftColumnText = {
     title: {
         part1: 'Основа моей работы — ',
-        part2: 'это системная психотерапия',
+        part2: 'это системное психологическое консультирование',
     },
     paragraph: {
         part1: 'Я использую методы с\u00A0', // неразрывный пробел

@@ -50,7 +50,7 @@ const ExpSection = () => (
                 // color, margin, lineHeight убраны
               }}
             >
-              Прохожу личную психотерапию с 2021 года.
+              Прохожу личную терапию с 2021 года.
             </Paragraph>
           </div>
 

@@ -40,9 +40,9 @@ const MainSection = () => (
 
         {/* Параграф */}
         <p className="text-sm xs:text-sm sm:text-base md:text-lg mx-auto md:max-w-80 md:mx-0 lg:mx-auto lg:text-xl xl:text-2xl 2xl:text-lg 3xl:text-2xl 3xl:max-w-2xl font-serif mt-3 sm:mt-4 mb-1 xs:mb-6 sm:mb-8 "> {/* Увеличиваем шрифт и max-w */}
-          Системный семейный психотерапевт, магистр психологии НИУ ВШЭ.
+          Семейный психолог, магистр психологии НИУ ВШЭ.
           <br />
-          <a className="hidden xs:block">Ко мне можно прийти на индивидуальную, парную или семейную психотерапию.</a>
+          <a className="hidden xs:block">Ко мне можно прийти на индивидуальную, парную или семейное консультирование.</a>
         </p>
         <Link href="https://t.me/Ulyana_chueva" legacyBehavior>
           <a target="_blank" rel="noopener noreferrer" className="block">
