@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2025-06-15 16:51">
+  <shop>
+    <name>Чуева Ульяна</name>
+    <company>Чуева Ульяна Сергеевна — психолог, семейный психотерапевт</company>
+    <url>https://chuevatherapy.ru</url>
+    <currencies>
+      <currency id="RUB" rate="1"/>
+    </currencies>
+    <categories>
+      <category id="1">Индивидуальные консультации</category>
+      <category id="2">Семейная терапия</category>
+    </categories>
+    <offers>
+      <offer id="1" available="true">
+        <name>Индивидуальная консультация психолога (60 минут)</name>
+        <description>Индивидуальная психотерапевтическая консультация с сертифицированным специалистом. Длительность — 60 минут (первая встреча может длиться до 90 минут). Доступны онлайн-сеансы или очные встречи в Москве. Общение строго конфиденциально, используются методы с научно доказанной эффективностью.</description>
+        <url>https://chuevatherapy.ru</url>
+        <price>3000</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <param name="Формат">онлайн или очно</param>
+        <param name="Расписание">по договоренности</param>
+      </offer>
+      <offer id="2" available="true">
+        <name>Семейная терапия (сеанс для пары или семьи, 60 минут)</name>
+        <description>Сеанс семейной психотерапии для пары или семьи. Длительность — 60 минут (первый сеанс до 90 минут). Проводится онлайн или очно (в Москве). Все встречи строго конфиденциальны; в работе применяется системный подход (системная семейная психотерапия).</description>
+        <url>https://chuevatherapy.ru</url>
+        <price>4000</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <param name="Формат">онлайн или очно</param>
+        <param name="Расписание">по договоренности</param>
+      </offer>
+    </offers>
+  </shop>
+</yml_catalog>
